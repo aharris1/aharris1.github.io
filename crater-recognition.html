@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/fav.png">
+		<!-- Author Meta -->
+		<meta name="author" content="CodePixar">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Geogebra Embed Code-->
+		<meta name=viewport content="width=device-width,initial-scale=1"><script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+		<!-- Site Title -->
+		<title>Independent Research</title>
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600" rel="stylesheet">
+		<!--
+		CSS
+		============================================= -->
+		<link rel="stylesheet" href="css/linearicons.css">
+		<link rel="stylesheet" href="css/owl.carousel.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/nice-select.css">
+		<link rel="stylesheet" href="css/magnific-popup.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/main.css">
+
+	</head>
+	<body>
+		<!-- Start Header Area -->
+
+		<!-- End Header Area -->
+		<!-- Start Banner Area -->
+		<section class="banner-area relative">
+            <header class="default-header">
+                <div class="container">
+                    <div class="header-wrap">
+
+                    </div>
+                </div>
+            </header>
+			<div class="overlay overlay-bg"></div>
+			<div class="container">
+				<div class="row height align-items-center justify-content-center">
+					<div class="col-lg-10">
+                        <div class="header-top d-flex justify-content-between align-items-center">
+                            <div class="logo">
+                                <a href="index.html"><img src="img/logo.png" alt=""></a>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Banner Area -->
+		<!-- Start Media Area -->
+		<section class="about-generic-area">
+			<div class="container">
+				<div class="row justify-content-center">
+						<div class="section-title text-center">
+							<h2>Indepedent Research: Lunar Crater Identification</h2>
+							<p>Utilizing Convolutional Neural Net with Novel Eigenvalue Expansion Pooling Layer</p>
+						</div>
+				</div>
+				<div class="row justify-content-center">
+					<img src="img/trainingPlot_25.png">
+					<p>
+						Training progression distributions of binary classifier networks with single hidden ReLU layer containing 25 neurons connected to a sigmoid output layer producing a single value.
+						Positive classifications are defined as those with sigmoid activation values exceeding 0.95.
+					</p>
+				</div>
+			</div>
+		</section>
+		<!-- End Media Area -->
+
+		<!-- About Generic Start -->
+		<section class="about-generic-area">
+				<h3>Project Successes</h3>
+            <ul>
+				<li>Trained a binary classifier to use vibrational membrane frequency mode amplitude inputs to classify tiles of the moon based on whether they represent tightly bounded craters with
+					an average accuracy of 96.9%, precision of 98.2%, and a sensitivity of 95.5%, yielding a Matthew's Correlation Coefficient of 0.938.</li>
+				<li>Expanded on 2002 method for analysis of impact craters using eigenvalue expansion to include analysis of 1,500 lunar impact craters.</li>
+                <ul style="list-style-type: circle">
+				<li>Wallis, D., & McBride, N. (2002). Planetary impact crater analysis with eigenfunction expansion. Monthly Notices of the Royal Astronomical Society. https://doi.org/10.1046/j.1365-8711.2002.05097.x</li></ul>
+				<li>Implemented efficient closed-form calculation of minimum mean square error vibrational membrane fitting algorithm using linear algebra in TensorFlow with GPU acceleration.</li>
+				<li>Performed preliminary exploration of optimal classification network architectures, found that networks with a single hidden layer of only 25 neurons could perform as described above.</li>
+				<li>Using numerical methods, found preliminary evidence for feasibility of optimizing computational efficiency for calculation of eigenvalue expansions by producing an interpolable surface,
+					which would eliminate the need to recalculate the eigenvalue expansion for every position of a sliding binary classifier window.</li>
+				<li>Produced draft of manuscript documenting current state of work and results achieved such that it is ready for review by former professors at Stevens in preparation of potential submission of astronomy journals.</li>
+			</ul>
+				<h3>Project Failures</h3>
+                    <ul>
+						<li>Did not complete most recent attempt before graduation.</li>
+						<li>Prior attempt had poor results, only achieving 74% recognition rate using raw digital elevation model data.</li>
+                    </ul>
+				<h3>Lessons Learned and Skills Developed</h3>
+                    <ul>
+						<li><b>Limitations of Machine Learning</b> - The initial attempt made during the summer of 2017 failed to achieve acceptable results, as it relied too heavily on a neural net to
+						infer patterns in the data using relatively limited training samples. As a result, the network was large and had a tendency to overfit the training data while failing to generalize
+						to samples in the separated test data. Understanding those limitations inspired a search for methods to reduce the input data's dimensionality, which resulted in discovery of
+						a 2002 paper discussing the methods for crater analysis using eigenfunction expansion. The application of domain knowledge to this problem, i.e. that craters are generally circular and
+						pit-shaped which makes them well approximated by vibrations of a circular membrane, allowed the reduction of the size of the classification network's input layer by several orders of
+						magnitude without significant reduction of the shape information encoded in that input layer.</li>
+						<li><b>Linear Algebra</b> - A course I took in Special and General Relativity involved rapidly teaching myself the basics of linear algebra in the process. In order to calculate the
+							eigenfunction expansion of a discrete grid of values I had to apply linear algebra methods. Furthermore, understanding that the height chosen for the rim of the vibrational membrane used to
+						approximate the shape of the crater would change the mean square error of that membrane led to utilization of calculus methods to determine the height for the membrane's rim that would
+						minimize the mean square error.</li>
+						<li><b>Incremental Research Validation</b> - Research is an open-ended process and as an independent researcher I have extremely limited human and computational resources, so it was
+							important to develop strong justifications for every step taken to ensure those limited resources were spent efficiently. That importance was underscored by the relative opacity
+							of neural nets to analysis and validation. To ensure that there was reason to believe a neural net could distinguish on the basis of eigenfunction expansions alone,
+							I performed a study to determine whether there were significant differences between the eigenfunction expansions of digital elevation model tiles tightly bounding impact craters and
+							random tiles of similar sizes. The results of that study justified investing further time and computational resources into implementing a binary classifier and calculating the
+							eigenfunction expansions of 38,000 lunar digital elevation model tiles of varying sizes.</li>
+						<li><b>LaTeX Typesetting Software</b> - Documenting the work performed, including the detailed derivation of calculations later implemented in TensorFlow required the use of LaTeX to
+						format the equations and maintain the figure, table, and equation references in an efficient manner.</li>
+                    </ul>
+				<h3>Additional Media</h3>
+			<div class="container-fluid">
+				<div class="row justify-content-center mt-1">
+					<!--TODO: Finish editing draft of paper-->
+				</div>
+			</div>
+		</section>
+		<!-- End Generic Start -->
+		<!-- Strat Footer Area -->
+		<footer class="section-gap">
+			<div class="container">
+				<div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
+					<p class="footer-text m-0">Copyright &copy; 2017 All rights reserved   |   This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com">Colorlib</a></p>
+				</div>
+			</div>
+		</footer>
+		<!-- End Footer Area -->
+		<script src="js/vendor/jquery-2.2.4.min.js"></script>
+		<script src="js/vendor/bootstrap.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/jquery.nice-select.min.js"></script>
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+
+	</body>
+</html>
